@@ -13,7 +13,7 @@ def calculate_age():
     if(today.month, today.day) < (month, day):
         age -= 1
 
-        result_label.config(text="Presrnt Age = " + "years")
+        result_label.config(text=f"Present Age : {age}" )
 
 root = Tk()
 root.title("Age Calculate")
@@ -33,7 +33,7 @@ year_entry.pack()
 
 Button(root, text="Calculate Age", command=calculate_age).pack(pady=15)
 
-result_label = Label(root, text="Present Age = ")
+result_label = Label(root, text="")
 result_label.pack()
 
 root.mainloop()
